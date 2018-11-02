@@ -1,6 +1,8 @@
 install.packages("rJava")
 install.packages("scagnostics")
+
 library(scagnostics)
+
 scagnostics(boston)
 s <- scagnostics(boston)
 o <- scagnosticsOutliers(s)
