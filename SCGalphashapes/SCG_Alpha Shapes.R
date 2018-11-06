@@ -1,9 +1,11 @@
-#plot alpha shape 1
+# Plot Alpha Shape 1 ------------------------------------------------------
+
 x1 = 0
 y1 = 2
 
 par(bg = NA)
-plot(x1, y1, pch = 19, col = "blue", xlab = "x", ylab = "y", xlim = c(-1, 5), ylim = c(0, 4))
+plot(x1, y1, pch = 19, col = "blue", xlab = "x", ylab = "y",
+     xlim = c(-1, 5), ylim = c(0, 4))
 
 x2 = 1.1
 y2 = 1.5
@@ -31,7 +33,9 @@ y6 = 2.5
 points(x6, y6, pch = 19, col = "blue")
 
 
-#plot alpha shapes
+# Plot Alpha Shapes -------------------------------------------------------
+
+
 #alpha shape I - alpha  = 0
 
 # Uniform sample of size n=300 in the annulus B(c, 0.5)\B(c, 0.25)

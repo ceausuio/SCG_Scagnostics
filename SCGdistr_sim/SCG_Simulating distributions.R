@@ -1,18 +1,22 @@
-#normal distribution
+# Normal Distribution -----------------------------------------------------
+
 n = 1000
 x = rnorm(n)
 y = rnorm(n)
 par(bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Normal")
 
-#uniform distribution
+# Uniform Distribution ----------------------------------------------------
+
 n = 1000
 x = runif(n)
 y = runif(n)
 par(bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Uniform")
 
-#linear distribution
+
+# Linear Distribution -----------------------------------------------------
+
 n = 1000
 x = runif(n, 0, 10)
 b = rnorm(n, 1, 2)
@@ -20,7 +24,8 @@ y = x + b
 par(bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Linear")
 
-#heteroscedastic distribution
+# Heteroscedastic Distributionz -------------------------------------------
+
 n = rep(1:1000, 2)
 a = 0
 b = 1
@@ -31,7 +36,9 @@ mod <- lm(y ~ n)
 par(bg = NA)
 plot(n, y, pch = ".", col = "blue", main = "Heteroscedastic")
 
-#Parable Distribution
+
+# Parable Distribution ----------------------------------------------------
+
 set.seed(1)
 n = 1000
 x1 = rnorm(n, 1, 25)
@@ -45,13 +52,16 @@ y1 = a*x1^2 + b*x2 + c
 par(bg = NA)
 plot(x1, y1, pch = ".", col = "blue", main = "Parabola")
 
-#Clumps distribution
+
+# Clumps Distribution -----------------------------------------------------
+
 set.seed(1)
 n = 1000
 x1 = rnorm(n, -1, 0.1)
 y1 = rnorm(n, -1, 0.1)
 par(bg = NA)
-plot(x1, y1, pch = ".", xlim = c(-2, 2), ylim = c(-2, 2), col = "blue", main = "Clumps")
+plot(x1, y1, pch = ".", xlim = c(-2, 2), ylim = c(-2, 2), col = "blue",
+     main = "Clumps")
 
 x2 = rnorm(n, 1, 0.1)
 y2 = rnorm(n, -1, 0.1)
@@ -63,7 +73,9 @@ y3 = rnorm(n, 1, 0.1)
 
 points(x3, y3, pch = ".", xlim = c(-2, 2), ylim = c(-2, 2), col = "blue")
 
-#"eye" distribution
+
+# “Eye” Distribution ------------------------------------------------------
+
 set.seed(1)
 n = 1000
 Y1 = rnorm(n,0, 0.1)
@@ -83,22 +95,27 @@ Q       = chol(sha);                 # cholesky decomposition for reshape the un
 radius  = d;
 D       = radius * (ucircle %*% Q);  # change directions via cholesky decomposition
 ellipse = (c + D + cbind(Y1,Y2))
-# plot(cbind(c(d,-d),c(d,-d)),type="n",xlab="", ylab="", main=substitute(list(d==d1,  rho==r1), list(d1=d,r1=sprintf("%0.2f",r))))
 points(ellipse, pch = ".", col = "blue", xlab = "x", ylab = "y")
 
-#AR(1) process distribution
+
+# AR(1) Process Distribution ----------------------------------------------
+
 n = arima.sim(list(order=c(1,0,0), ar=.5), n= 200) + 10
 par(bg = NA)
 plot(n, pch = ".", col = "blue", main = "AR(1) process")
 
-#sinus curve
+
+# Sinus curve -------------------------------------------------------------
+
 n = 10000
 x = rnorm(n)
 y = sin(x)
 par(bg = NA)
 plot(x, y, pch = ".", xlab = "x", ylab = "y", col = "blue", main = "Sinus curve")
 
-#integers
+
+# Integers ----------------------------------------------------------------
+
 n = rep(1:1000, 1000)
 a = 0
 b = 1
@@ -107,5 +124,6 @@ eps = rnorm(n, mean = 0, sd = sqrt(sigma2))
 y = a + b*n + 2*eps
 mod <- lm(y ~ n)
 par(bg = NA)
-plot(n, y, pch = ".", xlab = "x", ylab = "y", col = "blue", xlim = c(0,20), ylim = c(0,20), main = "Integers")
+plot(n, y, pch = ".", xlab = "x", ylab = "y", col = "blue",
+     xlim = c(0,20), ylim = c(0,20), main = "Integers")
 
