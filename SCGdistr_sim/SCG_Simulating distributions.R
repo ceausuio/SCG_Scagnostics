@@ -3,17 +3,18 @@
 n = 1000
 x = rnorm(n)
 y = rnorm(n)
-par(bg = NA)
+png(filename = "Normal Distribution", bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Normal")
+dev.off()
 
 # Uniform Distribution ----------------------------------------------------
 
 n = 1000
 x = runif(n)
 y = runif(n)
-par(bg = NA)
+png(filename = "Uniform Distribution", bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Uniform")
-
+dev.off()
 
 # Linear Distribution -----------------------------------------------------
 
@@ -21,8 +22,9 @@ n = 1000
 x = runif(n, 0, 10)
 b = rnorm(n, 1, 2)
 y = x + b
-par(bg = NA)
+png(filename = "Linear Distribution", bg = NA)
 plot(x, y, pch = ".", col = "blue", main = "Linear")
+dev.off()
 
 # Heteroscedastic Distributionz -------------------------------------------
 
@@ -33,9 +35,9 @@ sigma2 = n^1.3
 eps = rnorm(n, mean = 0, sd = sqrt(sigma2))
 y = a + b*n + 3*eps
 mod <- lm(y ~ n)
-par(bg = NA)
+png(filename = "Heteroscedastic Distribution", bg = NA)
 plot(n, y, pch = ".", col = "blue", main = "Heteroscedastic")
-
+dev.off()
 
 # Parable Distribution ----------------------------------------------------
 
@@ -49,9 +51,9 @@ b = 1
 c = -100
 
 y1 = a*x1^2 + b*x2 + c
-par(bg = NA)
+png(filename = "Parable", bg = NA)
 plot(x1, y1, pch = ".", col = "blue", main = "Parabola")
-
+dev.off()
 
 # Clumps Distribution -----------------------------------------------------
 
@@ -59,7 +61,7 @@ set.seed(1)
 n = 1000
 x1 = rnorm(n, -1, 0.1)
 y1 = rnorm(n, -1, 0.1)
-par(bg = NA)
+png(filename = "Clumps", bg = NA)
 plot(x1, y1, pch = ".", xlim = c(-2, 2), ylim = c(-2, 2), col = "blue",
      main = "Clumps")
 
@@ -72,7 +74,7 @@ x3 = rnorm(n, 0, 0.1)
 y3 = rnorm(n, 1, 0.1)
 
 points(x3, y3, pch = ".", xlim = c(-2, 2), ylim = c(-2, 2), col = "blue")
-
+dev.off()
 
 # “Eye” Distribution ------------------------------------------------------
 
@@ -80,7 +82,7 @@ set.seed(1)
 n = 1000
 Y1 = rnorm(n,0, 0.1)
 Y2 = rnorm(n,0, 0.1)
-par(bg = NA)
+png(filename = "Eye Distribution", bg = NA)
 plot(Y1,Y2, pch = ".",ylim=c(-6,6),xlim=c(-6,6), col = "blue", main = "Eye")
 rhovec  = c(0)  # direction
 dvec    = c(4)           # radius
@@ -96,23 +98,23 @@ radius  = d;
 D       = radius * (ucircle %*% Q);  # change directions via cholesky decomposition
 ellipse = (c + D + cbind(Y1,Y2))
 points(ellipse, pch = ".", col = "blue", xlab = "x", ylab = "y")
-
+dev.off()
 
 # AR(1) Process Distribution ----------------------------------------------
 
 n = arima.sim(list(order=c(1,0,0), ar=.5), n= 200) + 10
-par(bg = NA)
+png(filename = "AR(1) Process", bg = NA)
 plot(n, pch = ".", col = "blue", main = "AR(1) process")
-
+dev.off()
 
 # Sinus curve -------------------------------------------------------------
 
 n = 10000
 x = rnorm(n)
 y = sin(x)
-par(bg = NA)
+png(filename = "Sinus Curve", bg = NA)
 plot(x, y, pch = ".", xlab = "x", ylab = "y", col = "blue", main = "Sinus curve")
-
+dev.off()
 
 # Integers ----------------------------------------------------------------
 
@@ -123,7 +125,8 @@ sigma2 = n^1.3
 eps = rnorm(n, mean = 0, sd = sqrt(sigma2))
 y = a + b*n + 2*eps
 mod <- lm(y ~ n)
-par(bg = NA)
+png(filename = "Integers", bg = NA)
 plot(n, y, pch = ".", xlab = "x", ylab = "y", col = "blue",
      xlim = c(0,20), ylim = c(0,20), main = "Integers")
+dev.off()
 

@@ -1,9 +1,21 @@
+
+# Packages needed ---------------------------------------------------------
+
+install.packages("lattice")
+install.packages("alphahull")
+
+
+# Libraries ---------------------------------------------------------------
+
+library(lattice)
+library(alphahull)
+
 # Plot Alpha Shape 1 ------------------------------------------------------
 
 x1 = 0
 y1 = 2
 
-par(bg = NA)
+png(filename = "Alpha Shape 1",bg = NA)
 plot(x1, y1, pch = 19, col = "blue", xlab = "x", ylab = "y",
      xlim = c(-1, 5), ylim = c(0, 4))
 
@@ -31,12 +43,10 @@ x6 = 3.3
 y6 = 2.5
 
 points(x6, y6, pch = 19, col = "blue")
+dev.off()
 
 
-# Plot Alpha Shapes -------------------------------------------------------
-
-
-#alpha shape I - alpha  = 0
+# Alpha shape - alpha = 0 -------------------------------------------------
 
 # Uniform sample of size n=300 in the annulus B(c, 0.5)\B(c, 0.25)
 # with c=(0.5, 0.5).
@@ -50,7 +60,7 @@ alpha = 0
 ashape.obj = ashape(x, alpha = alpha)
 # Plot alpha-shape in blue, sample points in black,
 # and Delaunay triangulation in red
-par(bg = NA)
+png(filename = "Alpha Shape II - 0",bg = NA)
 plot(ashape.obj, col = c(4, 1, 2), pch = 19)
 
 n = 100
@@ -58,8 +68,11 @@ a = rnorm(n, 0.5, 0.05)
 b = rnorm(n, 0.5, 0.05)
 
 points (a, b, pch = 19)
+dev.off()
 
-#alpha shape I - alpha  = 1
+
+
+# Alpha Shape - alpha = 1 -------------------------------------------------
 
 # Uniform sample of size n=300 in the annulus B(c, 0.5)\B(c, 0.25)
 # with c=(0.5, 0.5).
@@ -73,7 +86,7 @@ alpha = 1
 ashape.obj = ashape(x, alpha = alpha)
 # Plot alpha-shape in blue, sample points in black,
 # and Delaunay triangulation in red
-par(bg = NA)
+png(filename = "Alpha Shape II - 1",bg = NA)
 plot(ashape.obj, col = c(4, 1, 2), pch = 19)
 
 n = 100
@@ -81,8 +94,12 @@ a = rnorm(n, 0.5, 0.05)
 b = rnorm(n, 0.5, 0.05)
 
 points (a, b, pch = 19)
+dev.off()
 
-#alpha shape I - alpha  = 1
+# Alpha Shape - alpha = w -------------------------------------------------
+
+
+#alpha shape I - alpha  = w
 # Uniform sample of size n=300 in the annulus B(c, 0.5)\B(c, 0.25)
 # with c=(0.5, 0.5).
 n = 500
@@ -98,7 +115,7 @@ ashape.obj = ashape(x, alpha = alpha)
 
 # Plot alpha-shape in blue, sample points in black,
 # and Delaunay triangulation in red
-par(bg = NA)
+png(filename = "Alpha Shape II - w ",bg = NA)
 plot(ashape.obj, col = c(4, 1, 2), pch = 19)
 
 n = 100
@@ -108,5 +125,5 @@ ashape.obj = ashape(c, alpha = alpha)
 
 #points(ashape.obj$x)
 plot(ashape.obj, add=T, pch=19, col = c(4, 1, 2))
-
+dev.off()
 
