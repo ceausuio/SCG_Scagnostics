@@ -33,9 +33,8 @@ for (i in 1:dim(ge)[1])
 # Plotting the SPLOM  -----------------------------------------------------
 
 pairs(boston)
-par(bg = NA)
 
-png(filename = "SPLOM BHD.png")
+png(filename = "SPLOM BHD.png", bg = NA)
 pairs(boston, pch = ".", bg = "grey", col = "blue",
       main = "Scatterplot matrix (SPLOM) of Boston Housing Dataset")
 dev.off()
