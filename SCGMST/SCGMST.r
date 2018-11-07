@@ -6,13 +6,13 @@ library(igraph)
 
 df = Boston
 #plot(df$dis, df$medv)
-d <- dist(cbind(df$dis, df$medv))
+d = dist(cbind(df$dis, df$medv))
 matrix_of_distances <- as.matrix(d)
-G <- graph.adjacency(as.matrix(d), weighted = TRUE)
+G = graph.adjacency(as.matrix(d), weighted = TRUE)
 
 ## Some graphical parameters
 ## MST and plot
-mst <- minimum.spanning.tree(G)
+mst = minimum.spanning.tree(G)
 edgelist = matrix(data = as.integer(igraph::get.edgelist(mst)), ncol = 2, byrow = F)
 
 df = Boston[, c('dis', 'medv')]
