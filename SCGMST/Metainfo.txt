@@ -1,0 +1,13 @@
+
+Name of Quantlet: SCGMST
+
+Published in: SCG - Scagnostics
+
+Description: Calculates and plots a Minimum Spanning Tree from a Scatter Plot
+
+Keywords: 'minimum spanning tree, mst, scatter plot, scagnostics'
+
+Author: Ioana Ceausu, Elizaveta Zinovyeva
+
+Submitted:  Tue, November 6 2018 by Ioana Ceausu
+
