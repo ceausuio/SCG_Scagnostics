@@ -35,14 +35,14 @@ for (i in 1:dim(ge)[1])
 pairs(boston)
 
 png(filename = "SPLOM BHD.png", bg = NA)
-pairs(boston, pch = ".", bg = "grey", col = "blue",
+pairs(boston, pch = ".", col = "blue",
       main = "Scatterplot matrix (SPLOM) of Boston Housing Dataset")
 dev.off()
 
 
 # Plotting the SPLOM for the Scagnostic measures --------------------------
 
-s <- as.matrix(s)
+s = as.matrix(s)
 t(s)
 s1 = as.matrix(t(s))
 pairs(s1)
@@ -52,3 +52,18 @@ png(filename = "Scagnostics SPLOM BHD.png")
 pairs(s1, pch = ".", col = "blue",main = "Scagnostics of Boston Housing Dataset")
 dev.off()
 
+
+# Example with PC Factors ------------------------------------------------
+
+png(filename = "SPLOM BHD.png", bg = NA)
+pairs(factors_scag_gr, pch = ".", col = "green",
+      main = "Scatterplot matrix (SPLOM) of PC Factors")
+dev.off()
+
+scagnostics(factors_scag_gr)
+s = scagnostics(factors_scag_gr)
+s1 = as.matrix(t(s))
+
+png(filename = "Scagnostics SPLOM PC Factors.png")
+pairs(s1, pch = ".", col = "green", main = "Scagnostics of PC Factors")
+dev.off()
