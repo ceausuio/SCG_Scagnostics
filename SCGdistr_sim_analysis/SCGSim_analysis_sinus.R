@@ -582,7 +582,7 @@ mq_sin_Monotonic = function(x){
   mean_sin_Monotonic = mean(x)
   q_sin_Monotonic = quantile(x)
   mq_sin_Monotonic = as.data.frame(rbind(mean_sin_Monotonic, q_sin_Monotonic[2],
-                                         q_sin_Stringy[4]))
+                                         q_sin_Monotonic[4]))
   rownames(mq_sin_Monotonic) = c("mean", "25%", "75%")
   return (mq_sin_Monotonic)
 }

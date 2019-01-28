@@ -581,7 +581,7 @@ mq_ari_Monotonic = function(x){
   mean_ari_Monotonic = mean(x)
   q_ari_Monotonic = quantile(x)
   mq_ari_Monotonic = as.data.frame(rbind(mean_ari_Monotonic, q_ari_Monotonic[2],
-                                         q_ari_Stringy[4]))
+                                         q_ari_Monotonic[4]))
   rownames(mq_ari_Monotonic) = c("mean", "25%", "75%")
   return (mq_ari_Monotonic)
 }

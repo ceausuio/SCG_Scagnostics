@@ -590,7 +590,7 @@ mq_clu_Monotonic = function(x){
   mean_clu_Monotonic = mean(x)
   q_clu_Monotonic = quantile(x)
   mq_clu_Monotonic = as.data.frame(rbind(mean_clu_Monotonic, q_clu_Monotonic[2],
-                                         q_clu_Stringy[4]))
+                                         q_clu_Monotonic[4]))
   rownames(mq_clu_Monotonic) = c("mean", "25%", "75%")
   return (mq_clu_Monotonic)
 }

@@ -599,7 +599,7 @@ mq_eye_Monotonic = function(x){
   mean_eye_Monotonic = mean(x)
   q_eye_Monotonic = quantile(x)
   mq_eye_Monotonic = as.data.frame(rbind(mean_eye_Monotonic, q_eye_Monotonic[2],
-                                         q_eye_Stringy[4]))
+                                         q_eye_Monotonic[4]))
   rownames(mq_eye_Monotonic) = c("mean", "25%", "75%")
   return (mq_eye_Monotonic)
 }
