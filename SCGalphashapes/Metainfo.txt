@@ -1,6 +1,6 @@
 Name of Quantlet: SCGAlphaShapes
 
-Published in: SCG - Scagnostics
+Published in: SCG_Scagnostics
 
 Description: Plots the alpha shapes
 

@@ -1,0 +1,13 @@
+Name of Quantlet: SCGdt
+
+Published in: SCG_Scagnostics
+
+Description: Calculates and plots the Delaunay Triangulation for a Scatter Plot
+
+Keywords: 'scagnostics, scatterplot, Delaunay Triangulation'
+
+Author: Ioana Ceausu
+
+Submitted:  Monday, January 2019 by Ioana Ceausu
+
+Datafile: boston.xls
