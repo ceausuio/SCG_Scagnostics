@@ -1,7 +1,7 @@
 
 Name of Quantlet: SCGMST
 
-Published in: SCG - Scagnostics
+Published in: SCG_Scagnostics
 
 Description: Calculates and plots a Minimum Spanning Tree from a Scatter Plot
 

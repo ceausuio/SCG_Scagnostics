@@ -1,10 +1,10 @@
 Name of Quantlet: SCGdistr_sim_analysis
 
-Published in: SCG - Scagnostics
+Published in: SCG_Scagnostics
 
-Description: Analysis of how the scagnostic coefficients behave for different types of distribution with different numbers of data points
+Description: "Analysis of how the scagnostic coefficients behave for different types of distribution with different amounts of data points."
 
-Keywords: 'scagnostics, simulation, coefficients, analysis'
+Keywords: 'scagnostics, simulation, coefficients, analysis, evaluation'
 
 Author: Ioana Ceausu
 

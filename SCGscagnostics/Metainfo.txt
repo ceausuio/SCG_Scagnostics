@@ -1,11 +1,11 @@
 
 Name of Quantlet: SCGScagnostics
 
-Published in: SCG - Scagnostics
+Published in: SCG_Scagnostics
 
-Description: Calculates the scagnostic measures for the dataset and plots the SPLOM and the scagnostics SPLOM
+Description: "Calculates the scagnostic measures for the dataset and plots the SPLOM, the scagnostics SPLOM and the heat-map of the scagnostic measures"
 
-Keywords: 'scagnostics, SPLOM'
+Keywords: 'scagnostics, scagnostic coefficients, SPLOM, heat-map'
 
 Author: Ioana Ceausu
 

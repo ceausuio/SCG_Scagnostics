@@ -1,9 +1,9 @@
 
 Name of Quantlet: SCGSimulating_Distributions
 
-Published in: SCG - Scagnostics
+Published in: SCG_Scagnostics
 
-Description: Simulates different types of distributions and the respective plots
+Description: Simulates different types of distributions and the respective plots; evaluation of scagnostic characteristics for the different types of distributions for multiple amounts of data points
 
 Keywords: 'normal distribution, uniform distribution, linear distribution, heteroscedastic distribution, parable, clumps, eye distribution, sinus curve, integers, scagnostics'
 
