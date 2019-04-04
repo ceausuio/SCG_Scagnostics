@@ -1,4 +1,4 @@
-Name of Quantlet: SCGdt
+Name of Quantlet: SCGDTscatterplot
 
 Published in: SCG_Scagnostics
 
