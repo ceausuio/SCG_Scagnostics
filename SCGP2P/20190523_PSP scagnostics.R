@@ -129,3 +129,54 @@ heatmap.2(p2p_scag_status,
           trace = "none",
           keysize = 0)
 dev.off()
+
+dev.off()
+png(
+  filename = 'ratio 012 vs status.png',
+  width     = 4,
+  height    = 4,
+  units     = "in",
+  res       = 1200,
+  pointsize = 3
+)
+par(bg = NA)
+plot(p2p$ratio012, p2p$status, pch = ".",
+     col = "dark red",
+     xlab = "ratio0012",
+     ylab = "status",
+     main = "ratio 0012 vs. status")
+dev.off()
+
+dev.off()
+png(
+  filename = 'turnover vs status.png',
+  width     = 4,
+  height    = 4,
+  units     = "in",
+  res       = 1200,
+  pointsize = 3
+)
+par(bg = NA)
+plot(p2p$turnover, p2p$status, pch = ".",
+     col = "dark red",
+     xlab = "turnover",
+     ylab = "status",
+     main = "turnover vs. status")
+dev.off()
+
+dev.off()
+png(
+  filename = 'DIO vs status.png',
+  width     = 4,
+  height    = 4,
+  units     = "in",
+  res       = 1200,
+  pointsize = 3
+)
+par(bg = NA)
+plot(p2p$DIO, p2p$status, pch = ".",
+     col = "dark red",
+     xlab = "DIO",
+     ylab = "status",
+     main = "DIO vs. status")
+dev.off()
