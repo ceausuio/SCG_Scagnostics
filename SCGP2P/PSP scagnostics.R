@@ -137,14 +137,14 @@ png(
   height    = 4,
   units     = "in",
   res       = 1200,
-  pointsize = 3
+  pointsize = 5
 )
-par(bg = NA)
+par(bg = NA,
+    cex.axis = 2)
 plot(p2p$ratio012, p2p$status, pch = ".",
      col = "dark red",
-     xlab = "ratio0012",
-     ylab = "status",
-     main = "ratio 0012 vs. status")
+     xlab = " ",
+     ylab = " ")
 dev.off()
 
 dev.off()
@@ -154,14 +154,14 @@ png(
   height    = 4,
   units     = "in",
   res       = 1200,
-  pointsize = 3
+  pointsize = 5
 )
-par(bg = NA)
+par(bg = NA,
+    cex.axis  = 2)
 plot(p2p$turnover, p2p$status, pch = ".",
      col = "dark red",
-     xlab = "turnover",
-     ylab = "status",
-     main = "turnover vs. status")
+     xlab = " ",
+     ylab = " ")
 dev.off()
 
 dev.off()
@@ -171,12 +171,13 @@ png(
   height    = 4,
   units     = "in",
   res       = 1200,
-  pointsize = 3
+  pointsize = 5
 )
-par(bg = NA)
+par(bg = NA,
+    cex.axis  = 2)
 plot(p2p$DIO, p2p$status, pch = ".",
      col = "dark red",
-     xlab = "DIO",
-     ylab = "status",
-     main = "DIO vs. status")
+     xlab = " ",
+     ylab = " ")
 dev.off()
+
